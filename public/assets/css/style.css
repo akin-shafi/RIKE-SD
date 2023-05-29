@@ -10,6 +10,28 @@ body {
   --secondary-color: #E6F6DA;
   --warning-color: #F5B95F;
   --warning-line-color: #FFAE01;
+  --light-text-color: #FFFFFF;
+  --secondary-color-btn: #0c4700;
+}
+
+/*** Service ***/
+.service-item {
+  background: var(--primary-bg-color);
+  transition: .5s;
+  color: #FFF;
+}
+
+.service-item:hover {
+  margin-top: -10px;
+  background: var(--secondary-bg-color);
+}
+
+.service-item * {
+  transition: .5s;
+}
+
+.service-item:hover * {
+  color: var(--light-text-color) !important;
 }
 
 /**********
@@ -23,6 +45,10 @@ body {
   margin: 5rem 0;
 }
 
+.btn-sec{
+  background-color: var(--secondary-color-btn) !important;
+  color: #FFF;
+}
 
 /* .underline {
   display: inline-block;
