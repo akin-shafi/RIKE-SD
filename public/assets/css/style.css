@@ -5,15 +5,22 @@ body {
 }
 
 :root {
-  --primary-bg-color: #82D145;
+  --primary-bg-color: #ddf2e1;
   --secondary-bg-color: #002031;
   --secondary-color: #E6F6DA;
   --warning-color: #F5B95F;
   --warning-line-color: #FFAE01;
   --light-text-color: #FFFFFF;
   --secondary-color-btn: #0c4700;
+  --primary: #ddf2e1;
 }
 
+.text-justified{
+  text-align: justify;
+}
+.bg-app-primary{
+  background-color: var(--primary);
+}
 /*** Service ***/
 .service-item {
   background: var(--primary-bg-color);
