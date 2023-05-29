@@ -1,38 +1,3 @@
-<script setup>
-import { Carousel, Slide } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
-
-const slides = [
-  './assets/img/partner-1.png',
-  './assets/img/partner-2.png',
-  './assets/img/partner-3.png',
-  './assets/img/partner-4.png',
-  './assets/img/partner-5.png',
-  './assets/img/partner-6.png',
-  // './assets/img/partner-7.png',
-]
-
-// carousel settings
-const settings = {
-  itemsToShow: 2,
-  snapAlign: 'center',
-}
-// breakpoints are mobile first
-// any settings not specified will fallback to the carousel settings
-const breakpoints = {
-  // 700px and up
-  700: {
-    itemsToShow: 3.5,
-    snapAlign: 'center',
-  },
-  // 1024 and up
-  1024: {
-    itemsToShow: 5,
-    snapAlign: 'start',
-  },
-}
-</script>
-  
 <template>
   <main class="main">
     <section class="section-slider">
@@ -399,6 +364,40 @@ const breakpoints = {
 </template>
 
 
+<script setup>
+  import { Carousel, Slide } from 'vue3-carousel'
+  import 'vue3-carousel/dist/carousel.css'
+
+  const slides = [
+    './assets/img/partner-1.png',
+    './assets/img/partner-2.png',
+    './assets/img/partner-3.png',
+    './assets/img/partner-4.png',
+    './assets/img/partner-5.png',
+    './assets/img/partner-6.png',
+    // './assets/img/partner-7.png',
+  ]
+
+  // carousel settings
+  const settings = {
+    itemsToShow: 2,
+    snapAlign: 'center',
+  }
+  // breakpoints are mobile first
+  // any settings not specified will fallback to the carousel settings
+  const breakpoints = {
+    // 700px and up
+    700: {
+      itemsToShow: 3.5,
+      snapAlign: 'center',
+    },
+    // 1024 and up
+    1024: {
+      itemsToShow: 5,
+      snapAlign: 'start',
+    },
+  }
+</script>
 <style scoped>
 .b-img {
   background-repeat: no-repeat;

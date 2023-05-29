@@ -1,49 +1,90 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+const ViewPage = () =>
+import(
+  /* webpackChunkName: "index-page" */ "@/views/ViewIndexPage.vue" //? Entry Point
+);
+  
 const HomePage = () =>
   import(
     /* webpackChunkName: "home-page" */ "@/views/HomePage.vue"
   );
+const AboutPage = () =>
+  import(
+    /* webpackChunkName: "home-page" */ "@/views/AboutPage.vue"
+  );
+  
 
 const routes = [
 
   {
     path: "/",
-    name: "Home",
-    component: HomePage,
-    meta: {
-      title: "Home | RIKE-SD",
-      requiresAuth: true,
-      metaTags: [
-        {
-          name: "description",
-          content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-        },
-        {
-          property: "og:description",
-          content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-        },
-      ],
+    name: "Index",
+    metaTags: {
+      title: "Research for Impact, Knowledge, Economy & Sustainable Development",
     },
-  },
+    component: ViewPage,
+    children: [
 
-  {
-    path: "/:catchAll(.*)",
-    component: () => import("@/components/NotFound.vue"),
-    meta: {
-      title: "Error 404 | RIKE-SD",
-      metaTags: [
-        {
-          name: "description",
-          content: "The error 404 page of RIKE-SD.",
-        },
-        {
-          property: "og:description",
-          content: "The error 404 page of RIKE-SD.",
-        },
-      ],
+    {
+      path: "/",
+      name: "Home",
+      component: HomePage,
+      meta: {
+        title: "Home | RIKE-SD",
+        requiresAuth: true,
+        metaTags: [
+          {
+            name: "description",
+            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+          },
+          {
+            property: "og:description",
+            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+          },
+        ],
+      },
     },
-  },
+
+    {
+      path: "/about",
+      name: "About",
+      component: AboutPage,
+      meta: {
+        title: "About | RIKE-SD",
+        requiresAuth: true,
+        metaTags: [
+          {
+            name: "description",
+            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+          },
+          {
+            property: "og:description",
+            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+          },
+        ],
+      },
+    },
+
+    {
+      path: "/:catchAll(.*)",
+      component: () => import("@/components/NotFound.vue"),
+      meta: {
+        title: "Error 404 | RIKE-SD",
+        metaTags: [
+          {
+            name: "description",
+            content: "The error 404 page of RIKE-SD.",
+          },
+          {
+            property: "og:description",
+            content: "The error 404 page of RIKE-SD.",
+          },
+        ],
+      },
+    },
+  ]
+}
 ];
 
 const router = createRouter({
