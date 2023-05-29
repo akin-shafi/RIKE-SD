@@ -25,25 +25,23 @@
               <ul class="navbar-nav mx-auto mb-lg-0">
                 <li class="nav-item me-3">
                   <router-link class="nav-link text-white" to="/">Home</router-link>
-                  <!-- <a class="nav-link text-white" aria-current="page" href="#home">Home</a> -->
                 </li>
                 <li class="nav-item me-3">
-                  <!-- <a class="nav-link text-white" href="#about">About</a> -->
                   <router-link class="nav-link text-white" to="/about">About</router-link>
                   
                 </li>
                 <li class="nav-item me-3">
-                  <a class="nav-link text-white" href="#event">Events</a>
+                  <router-link class="nav-link text-white" to="/">Events</router-link>
                 </li>
                 <li class="nav-item me-3">
-                  <a class="nav-link text-white" href="#event">Research and impact</a>
+                  <router-link class="nav-link text-white" to="/">Research and impact</router-link>
                 </li>
               </ul>
 
               <div class="d-flex">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                   <li class="nav-item me-3">
-                    <a class="nav-link text-white" aria-current="page" href="#blog">Blog</a>
+                    <router-link class="nav-link text-white" to="/">Blog</router-link>
                   </li>
                   <li class="nav-item">
                     <a href="#involved" class="btn s2b-text-bg-primary">Get involved</a>
