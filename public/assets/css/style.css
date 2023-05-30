@@ -6,12 +6,12 @@ body {
 
 :root {
   --primary-bg-color: #ddf2e1;
-  --secondary-bg-color: #002031;
-  --secondary-color: #E6F6DA;
+  --secondary-bg-color: #0c4700;
+  /* --secondary-color: #E6F6DA; */
   --warning-color: #F5B95F;
   --warning-line-color: #FFAE01;
   --light-text-color: #FFFFFF;
-  --secondary-color-btn: #0c4700;
+  /* --secondary-color: #0c4700; */
   --primary: #ddf2e1;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 .btn-sec{
-  background-color: var(--secondary-color-btn) !important;
+  background-color: var(--secondary-bg-color) !important;
   color: #FFF;
 }
 
@@ -203,9 +203,9 @@ body {
 }
 
 .s2b-text-bg-primary {
-  color: var(--secondary-color);
-  background-color: var(--primary-bg-color);
-  border: 1px solid var(--primary-bg-color);
+  color: var(--primary-bg-color);
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--secondary-bg-color);
 }
 
 .btn.s2b-text-bg-primary:hover {

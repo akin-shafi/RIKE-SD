@@ -28,10 +28,12 @@
                 </li>
                 <li class="nav-item me-3">
                   <router-link class="nav-link" to="/about">About</router-link>
-                  
                 </li>
                 <li class="nav-item me-3">
-                  <router-link class="nav-link" to="/">Events</router-link>
+                  <router-link class="nav-link" to="/team">Team</router-link>
+                </li>
+                <li class="nav-item me-3">
+                  <router-link class="nav-link" to="/event">Events</router-link>
                 </li>
                 <li class="nav-item me-3">
                   <router-link class="nav-link" to="/">Research and impact</router-link>
@@ -41,7 +43,7 @@
               <div class="d-flex">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                   <li class="nav-item me-3">
-                    <router-link class="nav-link" to="/">Blog</router-link>
+                    <router-link class="nav-link" to="/blog">Blog</router-link>
                   </li>
                   <li class="nav-item">
                     <a href="#involved" class="btn s2b-text-bg-primary">Get involved</a>

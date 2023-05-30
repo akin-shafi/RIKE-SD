@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
+                    
                     <h1 class="mb-4">Welcome to RikeSD</h1>
                     <p class="mb-4">
                         We are a not-for-profit organization dedicated to promoting sustainable development in communities across Africa. Our mission is to conduct impactful research, foster innovation, and empower entrepreneurs to drive positive change.
@@ -21,7 +21,7 @@
                         Join us in our mission to make a lasting impact on the African continent and beyond.
                     </p>
                     
-                    <a class="btn btn-sec py-3 px-5 mt-2" href="">Read More</a>
+                    <a class="btn s2b-text-bg-primary py-3 px-5 mt-2" href="">Read More</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <div class="row d-flex align-items-center" style="min-height: 300px; ">
                 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
+                    
                     <h1 class="mb-4">Our mission</h1>
                     <p class="mb-4 text-justified">
                         Achieving development impacts by building new knowledge-based economies in communities. 
@@ -63,7 +63,7 @@
             <div class="row g-5">
                 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
+                    
                     <h1 class="mb-4">Objectives</h1>
                     <p class="mb-4">
                         <ul>

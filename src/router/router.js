@@ -13,6 +13,18 @@ const AboutPage = () =>
   import(
     /* webpackChunkName: "home-page" */ "@/views/AboutPage.vue"
   );
+
+const EventPage = () =>
+  import(
+    /* webpackChunkName: "home-page" */ "@/views/EventPage.vue"
+  );
+
+const TeamPage = () =>
+  import(
+    /* webpackChunkName: "home-page" */ "@/views/TeamPage.vue"
+  );
+
+  
   
 
 const routes = [
@@ -52,6 +64,46 @@ const routes = [
       component: AboutPage,
       meta: {
         title: "About | RIKE-SD",
+        requiresAuth: true,
+        metaTags: [
+          {
+            name: "description",
+            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+          },
+          {
+            property: "og:description",
+            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+          },
+        ],
+      },
+    },
+
+    {
+      path: "/event",
+      name: "Event",
+      component: EventPage,
+      meta: {
+        title: "Event | RIKE-SD",
+        requiresAuth: true,
+        metaTags: [
+          {
+            name: "description",
+            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+          },
+          {
+            property: "og:description",
+            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+          },
+        ],
+      },
+    },
+
+    {
+      path: "/team",
+      name: "Team",
+      component: TeamPage,
+      meta: {
+        title: "Team | RIKE-SD",
         requiresAuth: true,
         metaTags: [
           {
