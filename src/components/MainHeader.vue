@@ -36,11 +36,14 @@
                   <router-link class="nav-link" to="/event">Events</router-link>
                 </li>
                 <div class="nav-item me-3 dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false">Research and impact</a>
+                    <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">Research</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item active">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                        <router-link to="/" class="dropdown-item">Researchers Community</router-link>
+                        <router-link to="/" class="dropdown-item ">Research for impact</router-link>
+                        <router-link to="/" class="dropdown-item ">Research Market Place</router-link>
+                        <router-link to="/" class="dropdown-item">Research Infrastructure Database</router-link>
+                        <router-link to="/" class="dropdown-item">Apply for Mentorship</router-link>
+                        
                     </div>
                 </div>
               </ul>
@@ -51,7 +54,7 @@
                     <router-link class="nav-link" to="/blog">Blog</router-link>
                   </li>
                   <li class="nav-item">
-                    <a href="#involved" class="btn s2b-text-bg-primary">Get involved</a>
+                    <router-link to="/involved" class="btn s2b-text-bg-primary">Get involved</router-link>
                   </li>
                 </ul>
               </div>

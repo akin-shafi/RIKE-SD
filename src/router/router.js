@@ -11,21 +11,19 @@ const HomePage = () =>
   );
 const AboutPage = () =>
   import(
-    /* webpackChunkName: "home-page" */ "@/views/AboutPage.vue"
+    /* webpackChunkName: "About-page" */ "@/views/AboutPage.vue"
   );
 
 const EventPage = () =>
   import(
-    /* webpackChunkName: "home-page" */ "@/views/EventPage.vue"
+    /* webpackChunkName: "Event-page" */ "@/views/EventPage.vue"
   );
 
 const TeamPage = () =>
   import(
-    /* webpackChunkName: "home-page" */ "@/views/TeamPage.vue"
+    /* webpackChunkName: "Team-page" */ "@/views/TeamPage.vue"
   );
 
-  
-  
 
 const routes = [
 
