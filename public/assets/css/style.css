@@ -208,6 +208,11 @@ body {
   border: 1px solid var(--secondary-bg-color);
 }
 
+.dropdown-item.active, .dropdown-item:active {
+  /* color: var(--primary-bg-color); */
+  text-decoration: none;
+  background-color: var(--secondary-bg-color);
+}
 .btn.s2b-text-bg-primary:hover {
   color: #fff;
   background-color: var(--warning-color);
