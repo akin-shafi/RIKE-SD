@@ -33,6 +33,18 @@ const TeamPage = () =>
   import(
     /* webpackChunkName: "Team-page" */ "@/views/MarketplacePage.vue"
   );
+
+  const ProfilePage = () =>
+  import(
+    /* webpackChunkName: "Team-page" */ "@/views/ProfilePage.vue"
+  );
+  
+
+  const ResearchOutputPage = () =>
+  import(
+    /* webpackChunkName: "Team-page" */ "@/views/ResearchOutputPage.vue"
+  );
+  
   
   
 
@@ -153,6 +165,46 @@ const routes = [
         component: MarketplacePage,
         meta: {
           title: "Marketplace | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
+      },
+
+      {
+        path: "/profile",
+        name: "Profile",
+        component: ProfilePage,
+        meta: {
+          title: "Profile | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
+      },
+
+      {
+        path: "/researchOutput",
+        name: "ResearchOutput",
+        component: ResearchOutputPage,
+        meta: {
+          title: "ResearchOutput | RIKE-SD",
           requiresAuth: true,
           metaTags: [
             {
