@@ -57,7 +57,9 @@
                     <div class="p-4">
                         <i class="fa fa-3x fa-globe text-primary mb-4"></i>
                         <h5 class="mb-3 h-title">Students</h5>
-                        <p>"Connecting students worldwide for diverse opportunities, fostering global collaboration, and enabling transformative learning experiences through our comprehensive network."</p>
+                        <p>Connecting students worldwide for diverse opportunities, fostering global collaboration, and enabling transformative learning experiences through our comprehensive network.</p>
+                        <button class="btn btn-sm rike-bg-secondary">Join now</button>
+
                     </div>
                 </div>
             </div>
@@ -66,7 +68,9 @@
                     <div class="p-4">
                         <i class="fa fa-3x fa-home text-primary mb-4"></i>
                         <h5 class="mb-3 h-title">Industries</h5>
-                        <p>"We facilitate industry connections, fostering collaboration and synergy across sectors, enhancing innovation and driving collective growth. Through strategic networking, we bridge gaps, unlock potential, and create valuable opportunities for industries to connect, thrive, and create a lasting impact."</p>
+                        <p>We facilitate industry connections, fostering collaboration and synergy across sectors, enhancing innovation and driving collective growth. Through strategic networking, we bridge gaps, unlock potential, and create valuable opportunities for industries to connect, thrive, and create a lasting impact.</p>
+                        <button class="btn btn-sm rike-bg-secondary">Join now</button>
+
                     </div>
                 </div>
             </div>
@@ -75,7 +79,9 @@
                     <div class="p-4">
                         <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
                         <h5 class="mb-3 h-title">Funders</h5>
-                        <p>"Unlocking opportunities, we connect funders globally, catalyzing impactful collaborations and empowering change-makers."</p>
+                        <p>Unlocking opportunities, we connect funders globally, catalyzing impactful collaborations and empowering change-makers.</p>
+                        <button class="btn btn-sm rike-bg-secondary">Join now</button>
+
                     </div>
                 </div>
             </div>

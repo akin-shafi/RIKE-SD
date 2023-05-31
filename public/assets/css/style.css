@@ -23,6 +23,8 @@ body {
 }
 /*** Service ***/
 .service-item {
+  /* display: flex;
+  align-items: center; */
   background: var(--primary-bg-color);
   transition: .5s;
   color: var(--secondary-bg-color);
@@ -30,6 +32,8 @@ body {
 
 .service-item p{
   font-size: 14px !important;
+  min-height: 262px;
+  /* text-align: ; */
 }
 
 .service-item:hover {
@@ -1088,3 +1092,5 @@ body {
     right: 2.5%;
   } */
 }
+
+

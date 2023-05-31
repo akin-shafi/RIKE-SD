@@ -29,6 +29,11 @@ const TeamPage = () =>
     /* webpackChunkName: "Team-page" */ "@/views/CommunityPage.vue"
   );
 
+  const MarketplacePage = () =>
+  import(
+    /* webpackChunkName: "Team-page" */ "@/views/MarketplacePage.vue"
+  );
+  
   
 
 
@@ -128,6 +133,26 @@ const routes = [
         component: CommunityPage,
         meta: {
           title: "Community | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
+      },
+
+      {
+        path: "/marketplace",
+        name: "Marketplace",
+        component: MarketplacePage,
+        meta: {
+          title: "Marketplace | RIKE-SD",
           requiresAuth: true,
           metaTags: [
             {

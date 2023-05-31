@@ -4,7 +4,7 @@
   <footer class="footer py-5">
     <div class="container">
       <div class="d-flex justify-content-between">
-        <img src="@/assets/s2b.png" alt="S2B logo">
+        <img src="@/assets/logo1.png" alt="logo" width="170">
 
         <div>
           <span class="iconify me-2" data-icon="skill-icons:instagram"></span>
@@ -18,27 +18,25 @@
 
       <div class="row g-3">
         <div class="col-md-3">
-          <h5 class="s2b-text-primary">Contact Us</h5>
-          <p>S2B@gmail.com</p>
-          <p>XYZ Plaza, Lekki, Lagos, Nigeria</p>
-          <p>+2348034562345</p>
-          <p>+2347056342134</p>
+          <h5 class="text-dark fw-bold">Contact Us</h5>
+          <p>rikesd22@gmail.com</p>
+          <p>NO. 10, LORD LUGARD STREET, ASOKORO, ABUJA, FCT, NIGERIA</p>
         </div>
         <div class="col-md-3">
-          <h5 class="s2b-text-primary">Our Services</h5>
+          <h5 class="text-dark fw-bold">Our Services</h5>
           <p>Home</p>
           <p>About Us</p>
           <p>Events</p>
           <p>Blog</p>
         </div>
         <div class="col-md-3">
-          <h5 class="s2b-text-primary">Events</h5>
+          <h5 class="text-dark fw-bold">Events</h5>
           <p>Speakers</p>
           <p>Featured Attendees</p>
         </div>
         <div class="col-md-3">
           <form role="Subscriber">
-            <label for="email" class="form-label s2b-text-primary">Join Our Community</label>
+            <label for="email" class="form-label text-dark fw-bold">Join Our Community</label>
             <div class="input-group">
               <input class="form-control form-control-sm" type="email" id="email" placeholder="Enter your email address"
                 aria-label="Join Our Community">
