@@ -36,13 +36,15 @@
                   <router-link class="nav-link" to="/event">Events</router-link>
                 </li>
                 <div class="nav-item me-3 dropdown">
-                    <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">Research</a>
+                    <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">Research for Impact</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <router-link to="/" class="dropdown-item">Researchers Community</router-link>
-                        <router-link to="/" class="dropdown-item ">Research for impact</router-link>
-                        <router-link to="/" class="dropdown-item ">Research Market Place</router-link>
-                        <router-link to="/" class="dropdown-item">Research Infrastructure Database</router-link>
-                        <router-link to="/" class="dropdown-item">Apply for Mentorship</router-link>
+                        <router-link to="/community" class="dropdown-item">Our Communities  </router-link>
+                        <router-link to="/marketplace" class="dropdown-item">Marketplace  </router-link>
+                        <router-link to="/mentorship" class="dropdown-item">Mentorship </router-link>
+                        <router-link to="/collaboration" class="dropdown-item">Collaboration  </router-link>
+                        <router-link to="/infrastructure" class="dropdown-item">Infrastructure  </router-link>
+                        <router-link to="/knowledge-economy" class="dropdown-item">Knowledge Economy  </router-link>
+                        <router-link to="/sustainable-dev" class="dropdown-item">Sustainable Development </router-link>
                         
                     </div>
                 </div>

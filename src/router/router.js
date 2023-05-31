@@ -24,6 +24,13 @@ const TeamPage = () =>
     /* webpackChunkName: "Team-page" */ "@/views/TeamPage.vue"
   );
 
+  const CommunityPage = () =>
+  import(
+    /* webpackChunkName: "Team-page" */ "@/views/CommunityPage.vue"
+  );
+
+  
+
 
 const routes = [
 
@@ -36,105 +43,127 @@ const routes = [
     component: ViewPage,
     children: [
 
-    {
-      path: "/",
-      name: "Home",
-      component: HomePage,
-      meta: {
-        title: "Home | RIKE-SD",
-        requiresAuth: true,
-        metaTags: [
-          {
-            name: "description",
-            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-          },
-          {
-            property: "og:description",
-            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-          },
-        ],
+      {
+        path: "/",
+        name: "Home",
+        component: HomePage,
+        meta: {
+          title: "Home | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
       },
-    },
 
-    {
-      path: "/about",
-      name: "About",
-      component: AboutPage,
-      meta: {
-        title: "About | RIKE-SD",
-        requiresAuth: true,
-        metaTags: [
-          {
-            name: "description",
-            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-          },
-          {
-            property: "og:description",
-            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-          },
-        ],
+      {
+        path: "/about",
+        name: "About",
+        component: AboutPage,
+        meta: {
+          title: "About | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
       },
-    },
 
-    {
-      path: "/event",
-      name: "Event",
-      component: EventPage,
-      meta: {
-        title: "Event | RIKE-SD",
-        requiresAuth: true,
-        metaTags: [
-          {
-            name: "description",
-            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-          },
-          {
-            property: "og:description",
-            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-          },
-        ],
+      {
+        path: "/event",
+        name: "Event",
+        component: EventPage,
+        meta: {
+          title: "Event | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
       },
-    },
 
-    {
-      path: "/team",
-      name: "Team",
-      component: TeamPage,
-      meta: {
-        title: "Team | RIKE-SD",
-        requiresAuth: true,
-        metaTags: [
-          {
-            name: "description",
-            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-          },
-          {
-            property: "og:description",
-            content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
-          },
-        ],
+      {
+        path: "/team",
+        name: "Team",
+        component: TeamPage,
+        meta: {
+          title: "Team | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
       },
-    },
+      {
+        path: "/community",
+        name: "Community",
+        component: CommunityPage,
+        meta: {
+          title: "Community | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
+      },
 
-    {
-      path: "/:catchAll(.*)",
-      component: () => import("@/components/NotFound.vue"),
-      meta: {
-        title: "Error 404 | RIKE-SD",
-        metaTags: [
-          {
-            name: "description",
-            content: "The error 404 page of RIKE-SD.",
-          },
-          {
-            property: "og:description",
-            content: "The error 404 page of RIKE-SD.",
-          },
-        ],
+      {
+        path: "/:catchAll(.*)",
+        component: () => import("@/components/NotFound.vue"),
+        meta: {
+          title: "Error 404 | RIKE-SD",
+          metaTags: [
+            {
+              name: "description",
+              content: "The error 404 page of RIKE-SD.",
+            },
+            {
+              property: "og:description",
+              content: "The error 404 page of RIKE-SD.",
+            },
+          ],
+        },
       },
-    },
-  ]
-}
+      
+     
+      // CommunityContent.vue'
+    ]
+  }
 ];
 
 const router = createRouter({

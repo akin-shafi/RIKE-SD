@@ -25,12 +25,16 @@ body {
 .service-item {
   background: var(--primary-bg-color);
   transition: .5s;
-  color: #FFF;
+  color: var(--secondary-bg-color);
+}
+
+.service-item p{
+  font-size: 14px !important;
 }
 
 .service-item:hover {
   margin-top: -10px;
-  background: var(--secondary-bg-color);
+  background: var(--secondary-bg-color) !important;
 }
 
 .service-item * {
@@ -216,6 +220,18 @@ body {
 .btn.s2b-text-bg-primary:hover {
   color: #fff;
   background-color: var(--warning-color);
+}
+
+
+.rike-bg-secondary {
+  color: #FFF;
+  background-color: var(--warning-color);
+  border: 1px solid #FFF;
+}
+
+.rike-bg-secondary:hover {
+  color: #000 !important;
+  background-color: #FFF !important;
 }
 
 .content {
