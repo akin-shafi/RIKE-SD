@@ -45,20 +45,21 @@
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                        <!-- <i class="fa fa-3x fa-graduation-cap app-text-secondary mb-4"></i> -->
+                        <Icon icon="ion:book-outline" class=" fa-3x app-text-secondary mb-4"/>
                         <h5 class="mb-3 h-title">Researchers</h5>
                         <p>We facilitate meaningful connections among researchers, fostering collaboration and innovation in a dynamic global network.</p>
-                        <button class="btn btn-sm rike-bg-secondary">Join now</button>
+                        <button class="btn btn-lg rike-bg-secondary" @click="joinCom">Join now</button>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                        <Icon icon="fluent-emoji-high-contrast:student" class="fa-3x app-text-secondary mb-4" />
                         <h5 class="mb-3 h-title">Students</h5>
                         <p>Connecting students worldwide for diverse opportunities, fostering global collaboration, and enabling transformative learning experiences through our comprehensive network.</p>
-                        <button class="btn btn-sm rike-bg-secondary">Join now</button>
+                        <button class="btn btn-lg rike-bg-secondary" @click="joinCom">Join now</button>
 
                     </div>
                 </div>
@@ -66,10 +67,11 @@
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                        <!-- <i class="fa fa-3x fa-home app-text-secondary mb-4"></i> -->
+                        <Icon icon="iconoir:industry" class="fa-3x app-text-secondary mb-4"/>
                         <h5 class="mb-3 h-title">Industries</h5>
                         <p>We facilitate industry connections, fostering collaboration and synergy across sectors, enhancing innovation and driving collective growth. Through strategic networking, we bridge gaps, unlock potential, and create valuable opportunities for industries to connect, thrive, and create a lasting impact.</p>
-                        <button class="btn btn-sm rike-bg-secondary">Join now</button>
+                        <button class="btn btn-lg rike-bg-secondary" @click="joinCom">Join now</button>
 
                     </div>
                 </div>
@@ -77,18 +79,49 @@
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                        <Icon icon="ri:refund-2-fill" class="fa fa-3x app-text-secondary mb-4"/>
                         <h5 class="mb-3 h-title">Funders</h5>
                         <p>Unlocking opportunities, we connect funders globally, catalyzing impactful collaborations and empowering change-makers.</p>
-                        <button class="btn btn-sm rike-bg-secondary">Join now</button>
+                        <button class="btn btn-lg rike-bg-secondary" @click="joinCom">Join now</button>
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    
+  <ModalComp :show="joinCommununityModal" :size="'modal-sm'" @close="joinCommununityModal = false">
+    <template #header>
+      <h4 class="modal-title text-danger">Alert</h4>
+    </template>
+
+    <template #body>
+      <h3 class="text-center">Are you sure?</h3>
+      <p class="text-center"><i>You won't be able to revert this!</i></p>
+    </template>
+
+    <template #footer>
+      <button type="button" class="btn btn-sm btn-primary d-block ms-auto" :class="{ disabled: loading }"
+        @click="proceedToDelete">
+        <span v-show="loading" class="spinner-border spinner-border-sm"></span>
+        <span>Proceed</span>
+      </button>
+    </template>
+  </ModalComp>
 </template>
 
+<script setup>
+import { ref } from "vue";
+import { Icon } from '@iconify/vue';
+import ModalComp from "@/components/ModalComp.vue";
+
+const joinCommununityModal = ref(false);
+
+const joinCom = () => {
+    joinCommununityModal.value = true;
+}
+</script>
 <style scoped>
 .hero-bg {
     background-color: #000;

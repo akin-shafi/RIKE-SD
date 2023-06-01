@@ -202,6 +202,11 @@ body {
   color: var(--primary-bg-color);
 }
 
+.app-text-secondary{
+  color: var(--secondary-bg-color);
+
+}
+
 .s2b-text-warning {
   color: var(--warning-color) !important;
 }
