@@ -44,6 +44,11 @@ const TeamPage = () =>
   import(
     /* webpackChunkName: "Team-page" */ "@/views/ResearchOutputPage.vue"
   );
+
+  const StartProjectPage = () =>
+  import(
+    /* webpackChunkName: "Team-page" */ "@/views/StartProjectPage.vue"
+  );
   
   
   
@@ -205,6 +210,26 @@ const routes = [
         component: ResearchOutputPage,
         meta: {
           title: "ResearchOutput | RIKE-SD",
+          requiresAuth: true,
+          metaTags: [
+            {
+              name: "description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+            {
+              property: "og:description",
+              content: "Research for Impact, Knowledge, Economy & Sustainable Development.",
+            },
+          ],
+        },
+      },
+
+      {
+        path: "/startproject",
+        name: "StartProjectPage",
+        component: StartProjectPage,
+        meta: {
+          title: "StartProjectPage | RIKE-SD",
           requiresAuth: true,
           metaTags: [
             {

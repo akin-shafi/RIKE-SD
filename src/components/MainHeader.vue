@@ -42,9 +42,9 @@
                         <router-link to="/marketplace" class="dropdown-item">Marketplace  </router-link>
                         <router-link to="/mentorship" class="dropdown-item">Mentorship </router-link>
                         <router-link to="/collaboration" class="dropdown-item">Collaboration  </router-link>
-                        <router-link to="/infrastructure" class="dropdown-item">Equipment Database  </router-link>
-                        <router-link to="/knowledge-economy" class="dropdown-item">Knowledge Economy  </router-link>
-                        <router-link to="/sustainable-dev" class="dropdown-item">Sustainable Development </router-link>
+                        <router-link to="/infrastructure" class="dropdown-item">RDI Infrastructure  </router-link>
+                        <!-- <router-link to="/knowledge-economy" class="dropdown-item">Knowledge Economy  </router-link> -->
+                        <!-- <router-link to="/sustainable-dev" class="dropdown-item">Sustainable Development </router-link> -->
                         
                     </div>
                 </div>

@@ -69,7 +69,7 @@
                     <div class="p-4">
                         <!-- <i class="fa fa-3x fa-home app-text-secondary mb-4"></i> -->
                         <Icon icon="iconoir:industry" class="fa-3x app-text-secondary mb-4"/>
-                        <h5 class="mb-3 h-title">Industries</h5>
+                        <h5 class="mb-3 h-title">Business</h5>
                         <p>We facilitate industry connections, fostering collaboration and synergy across sectors, enhancing innovation and driving collective growth. Through strategic networking, we bridge gaps, unlock potential, and create valuable opportunities for industries to connect, thrive, and create a lasting impact.</p>
                         <button class="btn btn-lg rike-bg-secondary" @click="joinCom">Join now</button>
 
