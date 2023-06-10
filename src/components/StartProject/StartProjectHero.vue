@@ -18,7 +18,8 @@
                             <form v-if="currentPage === 1" @submit.prevent="submitPrimaryCategory" class="needs-validation row" novalidate>
                               <h3 class="text-center">First, let’s get you set up. </h3>
                               <h6 class="col-md-12 text-center my-4">Select a primary category and subcategory for your new project.</h6>
-                              <div class="col-md-6 mb-3">
+                              <SelectCategory />
+                              <!-- <div class="col-md-6 mb-3">
                                 <label for="category" class="form-label">Category:</label>
                                 <select id="category" v-model="primaryCategory" class="form-select" required :class="{ 'is-invalid': !primaryCategory }">
                                   <option value="" disabled>Select a category</option>
@@ -33,7 +34,8 @@
                                   <option v-for="subCategory in getSubCategories(primaryCategory)" :value="subCategory.id" :key="subCategory.id">{{ subCategory.name }}</option>
                                 </select>
                                 <div class="invalid-feedback">Please select a subcategory.</div>
-                              </div>
+                                <div class="invalid-feedback">Please select a subcategory.</div>
+                              </div> -->
                               <div class="col-md-12 mb-3 d-flex justify-content-end">
                                 <button type="submit" class="btn btn-success">Next</button>
                               </div>
@@ -42,26 +44,12 @@
                             <form v-if="currentPage === 2" @submit.prevent="submitMoreSubCategory" class="needs-validation row" novalidate>
                                 <h3 class="text-center">Select one more subcategory. </h3>
                                 <h6 class="col-md-12 text-center my-4">It’ll help us provide more relevant guidance for your project.</h6>
-                                <div class="col-md-6 mb-3">
-                                    <label for="additionalCategory" class="form-label">Additional Category:</label>
-                                    <select id="additionalCategory" v-model="additionalCategory" class="form-select" required>
-                                      <option value="" disabled>Select an additional category</option>
-                                      <option v-for="category in categories" :value="category.id" :key="category.id">{{ category.name }}</option>
-                                    </select>
-                                    <div class="invalid-feedback">Please select an additional category.</div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                  <label for="additionalSubCategory" class="form-label">Additional Sub Category:</label>
-                                  <select id="additionalSubCategory" v-model="additionalSubCategory" class="form-select" required>
-                                    <option value="" disabled>Select an additional subcategory</option>
-                                    <option v-for="subCategory in getSubCategories(additionalCategory)" :value="subCategory.id" :key="subCategory.id">{{ subCategory.name }}</option>
-                                  </select>
-                                  <div class="invalid-feedback">Please select an additional subcategory.</div>
-                                </div>
-                                <div class="col-md-12 mb-3 d-flex justify-content-between">
-                                    <button type="button" class="btn btn-secondary" @click="goToPreviousPage">Previous</button>
-                                    <button type="submit" class="btn btn-success">Next</button>
-                                </div>
+                              <SelectMoreCategory />
+
+                              <div class="col-md-12 mb-3 d-flex justify-content-between">
+                                  <button type="button" class="btn btn-secondary" @click="goToPreviousPage">Previous</button>
+                                  <button type="submit" class="btn btn-success">Next</button>
+                              </div>
                             </form>
 
                             <form v-if="currentPage === 3" @submit.prevent="submitLocation" class="needs-validation row" novalidate>
@@ -76,6 +64,29 @@
                                     <label for="country" class="form-label">Select a country:</label>
                                     <select id="country" v-model="selectedCountry" class="form-select" required>
                                     <!-- options for countries -->
+                                    <option value="">-- Select a Country --</option>
+                                    <option value="AF">Afghanistan</option>
+                                    <option value="AL">Albania</option>
+                                    <option value="DZ">Algeria</option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="AT">Austria</option>
+                                    <option value="BE">Belgium</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="CN">China</option>
+                                    <option value="EG">Egypt</option>
+                                    <option value="FR">France</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="IN">India</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="MX">Mexico</option>
+                                    <option value="RU">Russia</option>
+                                    <option value="ZA">South Africa</option>
+                                    <option value="ES">Spain</option>
+                                    <option value="GB">United Kingdom</option>
+                                    <option value="US">United States</option>
                                     </select>
                                     <div class="invalid-feedback">Please select a country.</div>
                                 </div>
@@ -87,6 +98,11 @@
 
                             <form v-if="currentPage === 4" @submit.prevent="submitSignupForm" class="needs-validation row" novalidate>
                                 <h6 class="col-md-12 text-center my-4">Sign Up</h6>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Fullname:</label>
+                                    <input type="name" id="name" v-model="name" class="form-control" required>
+                                    <div class="invalid-feedback">Please enter a valid name.</div>
+                                </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email:</label>
                                     <input type="email" id="email" v-model="email" class="form-control" required>
@@ -112,24 +128,25 @@
   
   <script setup>
   import { ref } from 'vue';
-  import { categories } from './data.js';
-
+  // import { categories } from './data.js';
+  import SelectCategory from '@/components/StartProject/SelectCategory';
+  import SelectMoreCategory from '@/components/StartProject/SelectMoreCategory';
 
   const currentPage = ref(1);
-  const primaryCategory = ref('');
-  const subCategory = ref('');
-  const additionalCategory = ref('');
-  const additionalSubCategory = ref('');
+  // const primaryCategory = ref('');
+  // const subCategory = ref('');
+  // const additionalCategory = ref('');
+  // const additionalSubCategory = ref('');
 
   const selectedCountry = ref('');
   const email = ref('');
   const password = ref('');
 
 
-  function getSubCategories(categoryId) {
-    const selectedCategory = categories.find(category => category.id === Number(categoryId));
-    return selectedCategory ? selectedCategory.subCategories : [];
-  }
+  // function getSubCategories(categoryId) {
+  //   const selectedCategory = categories.find(category => category.id === Number(categoryId));
+  //   return selectedCategory ? selectedCategory.subCategories : [];
+  // }
 
   
   function submitPrimaryCategory() {
